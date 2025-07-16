@@ -1,12 +1,12 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Calendar, Clock, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Blog",
-  description: "Read my latest thoughts on web development, technology, and programming.",
-}
+  description:
+    "Read my latest thoughts on web development, technology, and programming.",
+};
 
 const blogPosts = [
   {
@@ -21,7 +21,8 @@ const blogPosts = [
   {
     slug: "mastering-tailwind-css",
     title: "Mastering Tailwind CSS: Tips and Tricks",
-    excerpt: "Discover advanced Tailwind CSS techniques to build beautiful and responsive user interfaces efficiently.",
+    excerpt:
+      "Discover advanced Tailwind CSS techniques to build beautiful and responsive user interfaces efficiently.",
     date: "2024-01-08",
     readTime: "6 min read",
     category: "CSS",
@@ -38,7 +39,8 @@ const blogPosts = [
   {
     slug: "typescript-for-beginners",
     title: "TypeScript for Beginners: Why You Should Make the Switch",
-    excerpt: "Understanding the benefits of TypeScript and how it can improve your JavaScript development workflow.",
+    excerpt:
+      "Understanding the benefits of TypeScript and how it can improve your JavaScript development workflow.",
     date: "2023-12-25",
     readTime: "7 min read",
     category: "TypeScript",
@@ -61,9 +63,9 @@ const blogPosts = [
     readTime: "9 min read",
     category: "Accessibility",
   },
-]
+];
 
-const categories = ["All", "Next.js", "React", "TypeScript", "CSS", "Node.js", "Accessibility"]
+const categories = ["All", "Next.js", "React", "TypeScript", "CSS", "Node.js", "Accessibility"];
 
 export default function BlogPage() {
   return (
@@ -131,5 +133,5 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

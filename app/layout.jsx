@@ -1,13 +1,12 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
+import React from "react";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: {
     default: "John Doe - Full Stack Developer",
     template: "%s | John Doe",
@@ -17,14 +16,10 @@ export const metadata: Metadata = {
   keywords: ["developer", "portfolio", "react", "nextjs", "web development"],
   authors: [{ name: "John Doe" }],
   creator: "John Doe",
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} min-h-screen flex flex-col`}>
@@ -33,5 +28,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  )
+  );
 }
