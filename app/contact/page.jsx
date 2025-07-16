@@ -1,11 +1,10 @@
-import type { Metadata } from "next"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Contact",
   description: "Get in touch with me for project collaborations, job opportunities, or just to say hello.",
 }
@@ -128,8 +127,8 @@ export default function ContactPage() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">What's your typical project timeline?</h3>
               <p className="text-gray-600">
-                Project timelines vary depending on scope and complexity. Simple websites typically take 2-4 weeks,
-                while complex applications can take 2-6 months.
+                Project timelines vary depending on scope and complexity. Simple websites typically take 2–4 weeks,
+                while complex applications can take 2–6 months.
               </p>
             </div>
 
