@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 
 export const metadata = {
   title: "Blog",

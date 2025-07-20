@@ -1,11 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react"
-import { Button } from "../components/ui/button"
-
-interface BlogPostProps {
-  params: Promise<{ slug: string }>
-}
+import { Button } from "../../../components/ui/button"
 
 const getBlogPost = async (slug) => {
   return {
@@ -39,7 +35,7 @@ const getBlogPost = async (slug) => {
   }
 }
 
-export async function generateMetadata({ params }: BlogPostProps): Promise<Metadata> {
+export async function generateMetadata({ params }) {
   const { slug } = await params
   const post = await getBlogPost(slug)
 
@@ -49,7 +45,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
   }
 }
 
-export default async function BlogPostPage({ params }: BlogPostProps) {
+export default async function BlogPostPage({ params }) {
   const { slug } = await params
   const post = await getBlogPost(slug)
 
