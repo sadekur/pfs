@@ -1,15 +1,13 @@
-import type { Metadata } from "next"
+import { Metadata } from "next"
 import Link from "next/link"
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "../components/ui/button"
 
 interface BlogPostProps {
   params: Promise<{ slug: string }>
 }
 
-// This would typically come from a CMS or markdown files
-const getBlogPost = async (slug: string) => {
-  // Mock data - in a real app, you'd fetch from your CMS or file system
+const getBlogPost = async (slug) => {
   return {
     title: "Getting Started with Next.js 14: A Complete Guide",
     content: `
