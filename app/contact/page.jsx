@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { Button } from "../../components/ui/button"
 import { Input } from "../../components/ui/input"
 import { Textarea } from "../../components/ui/textarea"
-import { Label } from "../../components/ui/label"
+// import { Label } from "../../components/ui/label"
 
 export const metadata = {
   title: "Contact",
@@ -78,27 +78,27 @@ export default function ContactPage() {
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="firstName">First Name</Label>
+                  <lable htmlFor="firstName">First Name</lable>
                   <Input id="firstName" type="text" placeholder="John" className="mt-1" />
                 </div>
                 <div>
-                  <Label htmlFor="lastName">Last Name</Label>
+                  <lable htmlFor="lastName">Last Name</lable>
                   <Input id="lastName" type="text" placeholder="Doe" className="mt-1" />
                 </div>
               </div>
 
               <div>
-                <Label htmlFor="email">Email</Label>
+                <lable htmlFor="email">Email</lable>
                 <Input id="email" type="email" placeholder="john@example.com" className="mt-1" />
               </div>
 
               <div>
-                <Label htmlFor="subject">Subject</Label>
+                <lable htmlFor="subject">Subject</lable>
                 <Input id="subject" type="text" placeholder="Project Collaboration" className="mt-1" />
               </div>
 
               <div>
-                <Label htmlFor="message">Message</Label>
+                <lable htmlFor="message">Message</lable>
                 <Textarea
                   id="message"
                   placeholder="Tell me about your project or how I can help you..."
