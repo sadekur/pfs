@@ -15,7 +15,7 @@ const projects = [
     title: "E-Commerce Platform",
     description:
       "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment processing, and admin dashboard.",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "../src/public/placeholder.svg?height=300&width=500",
     technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind CSS"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
