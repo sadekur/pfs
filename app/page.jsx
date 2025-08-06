@@ -129,12 +129,12 @@ export default function HomePage() {
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <Image
-  src="/placeholder.svg?height=200&width=400"
-  alt={`Project ${project}`}
-  width={400}
-  height={200}
-  className="w-full h-48 object-cover"
-/>
+                  src="/placeholder.svg?height=200&width=400"
+                  alt={`Project ${project}`}
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover"
+                />
 
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Project {project}</h3>
