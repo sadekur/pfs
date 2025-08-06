@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Github, ExternalLink, Calendar } from "lucide-react"
 import { Button } from "../../components/ui/button"
+import placeholderImage from '../../src/public/placeholder.svg';
 
 export const metadata = {
   title: "Projects",
@@ -15,7 +16,7 @@ const projects = [
     title: "E-Commerce Platform",
     description:
       "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment processing, and admin dashboard.",
-    image: "../../src/public/placeholdsadder.svg?height=300&width=500",
+    image: placeholderImage,
     technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind CSS"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
@@ -26,7 +27,7 @@ const projects = [
     title: "Task Management App",
     description:
       "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "../../src/public/placeholder.svg?height=300&width=500",
+    image: placeholderImage,
     technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Material-UI"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
@@ -37,7 +38,7 @@ const projects = [
     title: "Weather Dashboard",
     description:
       "A responsive weather dashboard that displays current conditions and forecasts with beautiful data visualizations.",
-    image: "../../src/public/placeholder.svg?height=300&width=500",
+    image: placeholderImage,
     technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
@@ -47,7 +48,7 @@ const projects = [
     id: 4,
     title: "Blog Platform",
     description: "A modern blog platform with markdown support, SEO optimization, and content management system.",
-    image: "../../src/public/placeholder.svg?height=300&width=500",
+    image: placeholderImage,
     technologies: ["Next.js", "MDX", "Prisma", "SQLite", "Tailwind CSS"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
@@ -58,7 +59,7 @@ const projects = [
     title: "Portfolio Website",
     description:
       "A responsive portfolio website showcasing projects and skills with smooth animations and modern design.",
-    image: "../../src/public/placeholder.svg?height=300&width=500",
+    image: placeholderImage,
     technologies: ["Next.js", "Framer Motion", "Tailwind CSS", "Vercel"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
@@ -68,7 +69,7 @@ const projects = [
     id: 6,
     title: "Chat Application",
     description: "Real-time chat application with multiple rooms, file sharing, and user presence indicators.",
-    image: "../../src/public/placeholder.svg?height=300&width=500",
+    image: placeholderImage,
     technologies: ["React", "Socket.io", "Express", "MongoDB", "JWT"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
