@@ -49,7 +49,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg">
-                  <Link href="/projects">
+                  <Link className="flex items-center" href="/projects">
                     View My Work <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -193,7 +193,7 @@ export default function HomePage() {
 
           <div className="text-center mt-12">
             <Button asChild size="lg">
-              <Link href="/projects">
+              <Link className="flex items-center" href="/projects">
                 View All Projects <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -209,7 +209,7 @@ export default function HomePage() {
             Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life.
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/contact">
+            <Link className="flex items-center" href="/contact">
               Get In Touch <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

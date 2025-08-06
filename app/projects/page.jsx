@@ -124,13 +124,13 @@ export default function ProjectsPage() {
 
                 <div className="flex space-x-3">
                   <Button variant="outline" size="sm" asChild>
-                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Link className="flex items-center" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </Link>
                   </Button>
                   <Button size="sm" asChild>
-                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <Link className="flex items-center" href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Live Demo
                     </Link>
