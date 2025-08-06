@@ -31,7 +31,7 @@ const getBlogPost = async (slug) => {
     date: "2024-01-15",
     readTime: "8 min read",
     category: "Next.js",
-    author: "John Doe",
+    author: "Sadekur Rahman",
   }
 }
 

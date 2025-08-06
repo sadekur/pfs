@@ -8,14 +8,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "John Doe - Full Stack Developer",
-    template: "%s | John Doe",
+    default: "Sadekur Rahman - Full Stack Developer",
+    template: "%s | Sadekur Rahman",
   },
   description:
-    "Personal portfolio of John Doe - Full Stack Developer specializing in React, Next.js, and modern web technologies.",
+    "Personal portfolio of Sadekur Rahman - Full Stack Developer specializing in React, Next.js, and modern web technologies.",
   keywords: ["developer", "portfolio", "react", "nextjs", "web development"],
-  authors: [{ name: "John Doe" }],
-  creator: "John Doe",
+  authors: [{ name: "Sadekur Rahman" }],
+  creator: "Sadekur Rahman",
   generator: "v0.dev",
 };
 

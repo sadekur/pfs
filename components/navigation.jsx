@@ -30,7 +30,6 @@ export default function Navigation() {
     } else if (theme === "light") {
       root.classList.remove("dark")
     } else {
-      // System theme
       const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches
       if (isDark) root.classList.add("dark")
       else root.classList.remove("dark")
@@ -48,7 +47,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
-            John Doe
+            Sadekur Rahman
           </Link>
 
           {/* Desktop Navigation */}

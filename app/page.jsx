@@ -41,7 +41,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Hi, I'm <span className="text-blue-600">John Doe</span>
+                Hi, I'm <span className="text-blue-600">Sadekur Rahman</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Full Stack Developer passionate about creating amazing web experiences with React, Next.js, and modern
@@ -62,7 +62,7 @@ export default function HomePage() {
             <div className="relative">
               <Image
                 src="/placeholder.svg?height=400&width=400"
-                alt="John Doe"
+                alt="Sadekur Rahman Profile"
                 width={400}
                 height={400}
                 className="rounded-full mx-auto shadow-2xl"
