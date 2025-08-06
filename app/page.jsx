@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Download, Github, ExternalLink } from "lucide-react"
 import { Button } from "../components/ui/button"
+import sadekur from '../src/public/sadekur-rahman.jpg';
 import placeholderImage from '../src/public/placeholder.svg';
 
 export default function HomePage() {
@@ -61,11 +62,11 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src={sadekur}
                 alt="Sadekur Rahman Profile"
-                width={400}
-                height={400}
-                className="rounded-full mx-auto shadow-2xl"
+                // width={400}
+                // height={400}
+                className="w-[400px] h-[400px] rounded-full mx-auto shadow-2xl"
               />
             </div>
           </div>
