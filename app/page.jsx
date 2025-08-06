@@ -2,8 +2,37 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Download, Github, ExternalLink } from "lucide-react"
 import { Button } from "../components/ui/button"
+import placeholderImage from '../src/public/placeholder.svg';
 
 export default function HomePage() {
+
+  const projects = [
+  {
+    title: "Portfolio Website",
+    description: "A personal portfolio built with Next.js and Tailwind CSS.",
+    image: placeholderImage,
+    tags: ["Next.js", "Tailwind"],
+    github: "https://github.com/yourname/portfolio",
+    live: "https://yourportfolio.com",
+  },
+  {
+    title: "E-commerce Store",
+    description: "A full-stack e-commerce app using React and Node.js.",
+    image: placeholderImage,
+    tags: ["React", "Node.js"],
+    github: "https://github.com/yourname/store",
+    live: "https://mystore.com",
+  },
+  {
+    title: "Chat App",
+    description: "A real-time chat application using Socket.IO.",
+    image: placeholderImage,
+    tags: ["Socket.IO", "MongoDB"],
+    github: "https://github.com/yourname/chat-app",
+    live: "https://chatapp.com",
+  },
+]
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -123,41 +152,43 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((project) => (
-              <div
-                key={project}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-              >
+            {projects.map((project, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <Image
-                  src="/placeholder.svg?height=200&width=400"
-                  alt={`Project ${project}`}
+                  src={project.image}
+                  alt={project.title}
                   width={400}
                   height={200}
                   className="w-full h-48 object-cover"
                 />
-
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">Project {project}</h3>
-                  <p className="text-gray-600 mb-4">
-                    A brief description of this amazing project and the technologies used.
-                  </p>
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex justify-between items-center">
                     <div className="flex space-x-2">
-                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">React</span>
-                      <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Next.js</span>
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                     <div className="flex space-x-2">
-                      <Button variant="ghost" size="sm">
-                        <Github className="h-4 w-4" />
+                      <Button variant="ghost" size="sm" asChild>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4" />
+                        </a>
                       </Button>
-                      <Button variant="ghost" size="sm">
-                        <ExternalLink className="h-4 w-4" />
+                      <Button variant="ghost" size="sm" asChild>
+                        <a href={project.live} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
                       </Button>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
+
           </div>
 
           <div className="text-center mt-12">
