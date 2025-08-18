@@ -7,5 +7,6 @@ import {
 } from 'next-themes'
 
 export function ThemeProvider({ children, ...props }) {
+  console.log('props', props);
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
 }

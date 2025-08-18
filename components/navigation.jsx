@@ -2,8 +2,9 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useEffect, useState } from "react"
-import { Menu, X, Sun, Moon, Laptop } from "lucide-react"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
+import ThemeSwitch from "./ThemeSwitch"
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -15,32 +16,6 @@ const navItems = [
 export default function Navigation() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
-  const [theme, setTheme] = useState("system")
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "system"
-    setTheme(savedTheme)
-    applyTheme(savedTheme)
-  }, [])
-
-  const applyTheme = (theme) => {
-    const root = window.document.documentElement
-    if (theme === "dark") {
-      root.classList.add("dark")
-    } else if (theme === "light") {
-      root.classList.remove("dark")
-    } else {
-      const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-      if (isDark) root.classList.add("dark")
-      else root.classList.remove("dark")
-    }
-  }
-
-  const handleThemeChange = (newTheme) => {
-    setTheme(newTheme)
-    localStorage.setItem("theme", newTheme)
-    applyTheme(newTheme)
-  }
 
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-sm border-b dark:border-gray-700 sticky top-0 z-50">
@@ -66,18 +41,8 @@ export default function Navigation() {
               </Link>
             ))}
 
-            {/* Theme toggle buttons */}
-            <div className="flex items-center space-x-2">
-              <button onClick={() => handleThemeChange("light")} className={`${theme === "light" ? "text-blue-600" : "text-gray-500 dark:text-gray-300"}`}>
-                <Sun size={18} />
-              </button>
-              <button onClick={() => handleThemeChange("dark")} className={`${theme === "dark" ? "text-blue-600" : "text-gray-500 dark:text-gray-300"}`}>
-                <Moon size={18} />
-              </button>
-              <button onClick={() => handleThemeChange("system")} className={`${theme === "system" ? "text-blue-600" : "text-gray-500 dark:text-gray-300"}`}>
-                <Laptop size={18} />
-              </button>
-            </div>
+            {/* Theme Switch */}
+            <ThemeSwitch />
           </div>
 
           {/* Mobile menu button */}
@@ -107,17 +72,9 @@ export default function Navigation() {
                 </Link>
               ))}
 
-              {/* Theme toggle buttons */}
-              <div className="flex items-center gap-4 px-3 pt-3">
-                <button onClick={() => handleThemeChange("light")} className={`${theme === "light" ? "text-blue-600" : "text-gray-500 dark:text-gray-300"}`}>
-                  <Sun size={18} />
-                </button>
-                <button onClick={() => handleThemeChange("dark")} className={`${theme === "dark" ? "text-blue-600" : "text-gray-500 dark:text-gray-300"}`}>
-                  <Moon size={18} />
-                </button>
-                <button onClick={() => handleThemeChange("system")} className={`${theme === "system" ? "text-blue-600" : "text-gray-500 dark:text-gray-300"}`}>
-                  <Laptop size={18} />
-                </button>
+              {/* Theme Switch for Mobile */}
+              <div className="px-3 pt-3">
+                <ThemeSwitch />
               </div>
             </div>
           </div>
