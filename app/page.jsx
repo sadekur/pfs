@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Download, Github, ExternalLink } from "lucide-react"
@@ -37,14 +39,14 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Hi, I'm <span className="text-blue-600">Sadekur Rahman</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+                Hi, I'm <span className="text-blue-600 dark:text-blue-400">Sadekur Rahman</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
                 Full Stack Developer passionate about creating amazing web experiences with React, Next.js, and modern
                 technologies.
               </p>
@@ -64,9 +66,7 @@ export default function HomePage() {
               <Image
                 src={sadekur}
                 alt="Sadekur Rahman Profile"
-                // width={400}
-                // height={400}
-                className="w-[400px] h-[400px] rounded-full mx-auto shadow-2xl"
+                className="w-[400px] h-[400px] rounded-full mx-auto shadow-2xl dark:shadow-gray-800/50"
               />
             </div>
           </div>
@@ -74,11 +74,11 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               I'm a passionate full-stack developer with 5+ years of experience building scalable web applications. I
               love turning complex problems into simple, beautiful designs.
             </p>
@@ -86,37 +86,37 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-blue-100 dark:bg-blue-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Fast Development</h3>
-              <p className="text-gray-600">Quick turnaround times without compromising on quality or performance.</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Fast Development</h3>
+              <p className="text-gray-600 dark:text-gray-400">Quick turnaround times without compromising on quality or performance.</p>
             </div>
 
             <div className="text-center p-6">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-green-100 dark:bg-green-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💡</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Creative Solutions</h3>
-              <p className="text-gray-600">Innovative approaches to solve complex technical challenges.</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Creative Solutions</h3>
+              <p className="text-gray-600 dark:text-gray-400">Innovative approaches to solve complex technical challenges.</p>
             </div>
 
             <div className="text-center p-6">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-purple-100 dark:bg-purple-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">User Focused</h3>
-              <p className="text-gray-600">Always keeping the end user in mind for the best experience.</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">User Focused</h3>
+              <p className="text-gray-600 dark:text-gray-400">Always keeping the end user in mind for the best experience.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Skills & Technologies</h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
@@ -135,8 +135,8 @@ export default function HomePage() {
               "Vercel",
             ].map((skill) => (
               <div key={skill} className="text-center">
-                <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <p className="font-medium text-gray-900">{skill}</p>
+                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm hover:shadow-md dark:shadow-gray-900/20 transition-shadow">
+                  <p className="font-medium text-gray-900 dark:text-white">{skill}</p>
                 </div>
               </div>
             ))}
@@ -145,16 +145,16 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-            <p className="text-xl text-gray-600">Here are some of my recent projects that I'm proud of.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">Here are some of my recent projects that I'm proud of.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-900/20 overflow-hidden hover:shadow-xl dark:hover:shadow-gray-900/40 transition-shadow">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -163,12 +163,12 @@ export default function HomePage() {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
                   <div className="flex justify-between items-center">
                     <div className="flex space-x-2">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
+                        <span key={tag} className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 text-xs rounded">
                           {tag}
                         </span>
                       ))}
@@ -203,10 +203,10 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-blue-600 dark:bg-blue-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let's Work Together</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 dark:text-blue-200 mb-8 max-w-2xl mx-auto">
             Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life.
           </p>
           <Button asChild size="lg" variant="secondary">
